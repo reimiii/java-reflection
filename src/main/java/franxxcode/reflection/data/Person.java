@@ -1,7 +1,13 @@
 package franxxcode.reflection.data;
 
+import franxxcode.reflection.annotation.NotBlank;
+
 public class Person implements NameAble {
+
+    @NotBlank
     private String firstName;
+
+    @NotBlank(allowEmptyString = true)
     private String lastName;
 
     public Person() {
