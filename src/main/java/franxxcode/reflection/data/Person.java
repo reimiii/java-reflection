@@ -2,6 +2,8 @@ package franxxcode.reflection.data;
 
 import franxxcode.reflection.annotation.NotBlank;
 
+import java.util.List;
+
 public class Person implements NameAble {
 
     @NotBlank
@@ -12,12 +14,22 @@ public class Person implements NameAble {
 
     private int age;
 
+    private List<String> hobbies;
+
     public Person() {
     }
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
     }
 
     public int getAge() {
